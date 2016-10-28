@@ -119,7 +119,7 @@ public class BubbleLayout extends BubbleBaseLayout {
                     getViewParams().x = x;
                     getViewParams().y = y;
                     getWindowManager().updateViewLayout(this, getViewParams());
-                    if (getLayoutCoordinator() != null) {
+                    if (getLayoutCoordinator() != null && System.currentTimeMillis() - lastTouchDown > TOUCH_TIME_THRESHOLD) {
                         getLayoutCoordinator().notifyBubblePositionChanged(this, x, y);
                     }
                     break;

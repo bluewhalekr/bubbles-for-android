@@ -49,7 +49,7 @@ final class BubblesLayoutCoordinator {
             trashView.setVisibility(View.VISIBLE);
             if (checkIfBubbleIsOverTrash(bubble)) {
                 trashView.applyMagnetism();
-                trashView.vibrate();
+//                trashView.vibrate();
                 applyTrashMagnetismToBubble(bubble);
             } else {
                 trashView.releaseMagnetism();
